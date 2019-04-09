@@ -51,12 +51,6 @@ def mult_sim(w, target_v, context_v):
     context_similarity[context_similarity<0] = 0.0
     return (target_similarity * context_similarity)
 
-def predict_word(sentence)
-
-if len(sys.argv) < 2:
-    print >> sys.stderr, "Usage: %s <model-param-file>"  % (sys.argv[0])
-    sys.exit(1)
-
 model_param_file = "/home/speech.01.cpu/nlp/zoujinyong/model/context2vec.ukwac.model/context2vec.ukwac.model.params"
 gpu = -1 
 xp = cuda.cupy if gpu >= 0 else numpy
@@ -107,6 +101,8 @@ def predict_interface(line, n_result=20, threshold=0.50):
             if similarity[i] >= threshold:
                 #print('{0}: {1}'.format(index2word[i], similarity[i]))
                 result.append(index2word[i])
+            else:
+                break
             count += 1
             if count == n_result:
                 break
