@@ -51,7 +51,7 @@ def mult_sim(w, target_v, context_v):
     context_similarity[context_similarity<0] = 0.0
     return (target_similarity * context_similarity)
 
-model_param_file = "/home/speech.01.cpu/nlp/zoujinyong/model/context2vec.ukwac.model/context2vec.ukwac.model.params"
+model_param_file = "~/model/context2vec.ukwac.model/context2vec.ukwac.model.params"
 gpu = -1 
 xp = cuda.cupy if gpu >= 0 else numpy
 
