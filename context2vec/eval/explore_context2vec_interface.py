@@ -57,7 +57,7 @@ if len(sys.argv) < 2:
     print >> sys.stderr, "Usage: %s <model-param-file>"  % (sys.argv[0])
     sys.exit(1)
 
-model_param_file = "/home/speech.01.cpu/nlp/zoujinyong/model/context2vec.ukwac.model/context2vec.ukwac.model.params"
+model_param_file = ""
 gpu = -1 
 xp = cuda.cupy if gpu >= 0 else numpy
 
